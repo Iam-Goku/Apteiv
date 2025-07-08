@@ -6,6 +6,7 @@
     <title>Our Services | WebCraft Pro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Navigation -->
@@ -15,7 +16,7 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
+                <!-- <a href="portfolio.html">Portfolio</a> -->
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact Us</a>
             </div>
@@ -84,8 +85,11 @@
                     </li>
                 </ol>
             </div>
-            <div class="service-image">
-                <img src="images/web-dev.jpg" alt="Website development">
+            <div class="service-image rounded">
+                <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
+                   <source src="images/web-dev.mp4" type="video/mp4">
+                   Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -93,8 +97,11 @@
     <!-- Maintenance Services -->
     <section class="service-detail dark" id="maintenance">
         <div class="container">
-            <div class="service-image">
-                <img src="images/maintenance.jpg" alt="Website maintenance">
+            <div class="service-image  rounded">
+                 <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
+                   <source src="images/maintenance.mp4" type="video/mp4">
+                   Your browser does not support the video tag.
+                </video>
             </div>
             <div class="service-content">
                 <h2>Monthly Maintenance Plans</h2>
@@ -103,33 +110,32 @@
                 <div class="plan-options">
                     <div class="plan-card">
                         <h3>Bronze</h3>
-                        <p class="price">$99<span>/mo</span></p>
-                        <ul>
+                        <p class="price">100 AED<span>/mo</span></p>
+                        <ul> 
+                            <li><i class="fas fa-check"></i> Hosting + SSL</li>
                             <li><i class="fas fa-check"></i> Security Updates</li>
-                            <li><i class="fas fa-check"></i> Weekly Backups</li>
                             <li><i class="fas fa-check"></i> Uptime Monitoring</li>
-                            <li><i class="fas fa-check"></i> Basic Support</li>
+                            <li><i class="fas fa-check"></i> One Update Per Month</li>
                         </ul>
                     </div>
                     <div class="plan-card featured">
                         <span class="popular">Most Popular</span>
                         <h3>Silver</h3>
-                        <p class="price">$199<span>/mo</span></p>
-                        <ul>
+                        <p class="price">150 AED<span>/mo</span></p>
+                        <ul> 
                             <li><i class="fas fa-check"></i> Everything in Bronze</li>
                             <li><i class="fas fa-check"></i> Performance Optimization</li>
-                            <li><i class="fas fa-check"></i> Monthly Analytics Report</li>
+                            <li><i class="fas fa-check"></i> 2–3 content changes</li>
                             <li><i class="fas fa-check"></i> Priority Support</li>
                         </ul>
                     </div>
                     <div class="plan-card">
                         <h3>Gold</h3>
-                        <p class="price">$299<span>/mo</span></p>
+                        <p class="price">200–250 AED<span>/mo</span></p>
                         <ul>
                             <li><i class="fas fa-check"></i> Everything in Silver</li>
                             <li><i class="fas fa-check"></i> Content Updates (up to 5 hrs/mo)</li>
                             <li><i class="fas fa-check"></i> SEO Maintenance</li>
-                            <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
                         </ul>
                     </div>
                 </div>
@@ -138,7 +144,7 @@
     </section>
 
     <!-- Additional Services -->
-    <section class="additional-services">
+    <!-- <section class="additional-services">
         <div class="container">
             <h2>Additional Services</h2>
             <div class="services-grid">
@@ -162,7 +168,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- CTA Section -->
     <section class="service-cta">
@@ -173,7 +179,42 @@
         </div>
     </section>
 
-    <!-- Footer (same as index.html) -->
+       <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
+                    <p>Professional website development and maintenance services to help your business thrive online.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#development">Website Development</a></li>
+                        <li><a href="services.html#maintenance">Monthly Maintenance</a></li>
+                        <li><a href="services.html#seo">SEO Services</a></li>
+                        <li><a href="services.html#hosting">Hosting Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <!-- <p><i class="fas fa-map-marker-alt"></i> 123 Web Street, Digital City</p> -->
+                    <p><i class="fas fa-phone"></i> +971 503123570</p>
+                    <p><i class="fas fa-envelope"></i> gokulrajgrkr@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 WebCraft Pro. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     
     <script src="js/main.js"></script>
 </body>
