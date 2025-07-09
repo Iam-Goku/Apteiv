@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
+    --primary: #86d9bc;
+    --primary-dark: #4dc99d;
     --secondary: #0ea5e9;
     --dark: #1e293b;
     --light: #f8fafc;
@@ -25,12 +25,6 @@ body {
     background-color: #fff;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 section {
     padding: 80px 0;
@@ -74,6 +68,7 @@ img {
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #f1f5f3;
 }
 
 .btn.primary {
@@ -160,24 +155,32 @@ img {
 
 /* Hero Section */
 .hero {
-    padding-top: 120px;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding-top: 120px;
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem 1rem;
 }
 
 .hero .container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  text-align: center;
 }
 
 .hero-content {
-    flex: 1;
+  z-index: 1;
+  margin-bottom: 45%;
+  margin-left: 26%;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
 
 .subhead {
     font-size: 1.25rem;
@@ -189,12 +192,18 @@ img {
     display: flex;
     gap: 20px;
     margin-top: 30px;
+    background-color: var(--primary);
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;  
+
 }
 
-.hero-image, .service-image {
+/* .hero-image, .service-image {
     flex: 1;
     animation: float 6s ease-in-out infinite;
-}
+} */
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -1247,6 +1256,20 @@ cite {
     }
 }
 
+@media (min-width: 768px) {
+  .hero .container {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .hero-content {
+    max-width: 50%;
+  }
+  .hero-image {
+    max-width: 45%;
+  }
+}
+
 /*Price tab*/
 
 /* Pricing Tabs Container */
@@ -1340,4 +1363,33 @@ cite {
 .rounded {
   border-radius: 8px;
   overflow: hidden;
+}
+
+
+#lottie-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Make sure it's behind your content */
+  pointer-events: none; /* So users can click through it */
+}
+
+#lottie-overlay {
+  z-index: 1; /* Above background, behind content */
+  pointer-events: none; /* So clicks pass through */
+  position: absolute;
+  margin-top: 8%;
+  margin-right: 3%;
+  width: 50%;
+  height: 50%;
+  z-index: 0; /* Make sure it's behind your content */
+  pointer-events: none; /* So users can click through it */
+}
+
+.index-container {
+  max-width: 90%;
+  margin: 0 auto;   /* centers it */
+  padding: 0 2rem;  /* space inside */
 }

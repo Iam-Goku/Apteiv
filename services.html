@@ -11,7 +11,7 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="container index-container">
             <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -27,10 +27,11 @@
             </button>
         </div>
     </nav>
-    
+      
     <!-- Services Header -->
     <section class="page-header">
         <div class="container">
+             <div id="lottie-background"></div>
             <h1>Our Services</h1>
             <p>Comprehensive solutions to build, maintain, and grow your online presence</p>
         </div>
@@ -219,3 +220,13 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('lottie-background'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/anime-service.json' 
+  });
+</script>
