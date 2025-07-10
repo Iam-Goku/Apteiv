@@ -6,7 +6,7 @@
     <title>Our Services | WebCraft Pro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -30,8 +30,8 @@
       
     <!-- Services Header -->
     <section class="page-header">
+        <div id="lottie-services"></div>
         <div class="container">
-             <div id="lottie-background"></div>
             <h1>Our Services</h1>
             <p>Comprehensive solutions to build, maintain, and grow your online presence</p>
         </div>
@@ -39,7 +39,7 @@
 
     <!-- Website Development -->
     <section class="service-detail" id="development">
-        <div class="container">
+        <div class="container index-container">
             <div class="service-content">
                 <h2>Professional Website Development</h2>
                 <p>We create custom, responsive websites designed to represent your brand and convert visitors into customers. Our development process focuses on performance, user experience, and search engine optimization from the ground up.</p>
@@ -86,24 +86,27 @@
                     </li>
                 </ol>
             </div>
-            <div class="service-image rounded">
+            
+            <div id="lottie-webdev"></div>
+            <!-- <div class="service-image rounded">
                 <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
-                   <source src="images/web-dev.mp4" type="video/mp4">
+                   <source src="images/web-dev.mp4" type="video/mp4">                   
                    Your browser does not support the video tag.
                 </video>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- Maintenance Services -->
     <section class="service-detail dark" id="maintenance">
-        <div class="container">
-            <div class="service-image  rounded">
+        <div class="container index-container">
+            <div id="lottie-maintenance"></div>
+            <!-- <div class="service-image  rounded">
                  <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
                    <source src="images/maintenance.mp4" type="video/mp4">
                    Your browser does not support the video tag.
                 </video>
-            </div>
+            </div> -->
             <div class="service-content">
                 <h2>Monthly Maintenance Plans</h2>
                 <p>Your website needs ongoing care to stay secure, fast, and effective. Our maintenance plans handle all the technical details so you can focus on your business.</p>
@@ -223,10 +226,27 @@
 
 <script>
   lottie.loadAnimation({
-    container: document.getElementById('lottie-background'),
+    container: document.getElementById('lottie-services'),
     renderer: 'svg',
     loop: true,
     autoplay: true,
     path: 'images/anime-service.json' 
   });
+
+    lottie.loadAnimation({
+    container: document.getElementById('lottie-webdev'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/anime-webdev.json' 
+  });
+
+    lottie.loadAnimation({
+    container: document.getElementById('lottie-maintenance'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'images/anime-maintenance.json' 
+  });
+
 </script>

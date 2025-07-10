@@ -1,1 +1,5 @@
 https://en.websimple.com/
+
+For Lottie editing
+
+https://magna25.github.io/lottie-editor/
