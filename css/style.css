@@ -27,7 +27,7 @@ body {
 
 
 section {
-    padding: 80px 0;
+    padding: 3%;
 }
 
 h1, h2, h3, h4 {
@@ -524,6 +524,9 @@ footer {
     color: #1a1a1a;  
 }
 
+.contact-header{
+    margin-top: -13%;
+}
 
 .page-header h1 {
     font-size: 3rem;
@@ -860,6 +863,8 @@ cite {
 .pricing-section {
     background-color: white;
     text-align: center;
+    margin-top: -15%;
+    margin-top: 1px;
 }
 
 .pricing-section.dark {
@@ -1422,6 +1427,13 @@ cite {
   height: 50%;
   z-index: 0; /* Make sure it's behind your content */
   pointer-events: none; /* So users can click through it */
+}
+
+#lottie-contact{
+  width: 20%;       
+  transform: translate3d(50%, 63%, 0px);
+  z-index: 0;
+  /* top: 0; */
 }
 
 .index-container {
