@@ -6,3 +6,6 @@ https://magna25.github.io/lottie-editor/
 
 free lottie
 https://lottiefiles.com/free-animations/payment-landscape-anime
+
+Alternate for lottie
+https://editor.rive.app/home
