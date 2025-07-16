@@ -1396,13 +1396,12 @@ cite {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;       
-  height: 60%;      
-  transform: scaleX(3); 
-  transform-origin: center; 
+  width: 50%;       
+  height: 43%;      
   z-index: 0;
   pointer-events: none;
   margin-top: 70px;
+  margin-left: -1%;
 }
 
 #lottie-webdev{
