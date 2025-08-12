@@ -329,3 +329,29 @@ document.addEventListener('DOMContentLoaded', function() {
         switchTab(firstTabId);
     }
 });
+
+//Navbar Hamburger
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    // Toggle active class on hamburger
+    this.classList.toggle('active');
+    
+    // Toggle active class on nav links
+    navLinks.classList.toggle('active');
+    
+    // Toggle body overflow when menu is open
+    document.body.style.overflow = this.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+});
