@@ -1,12 +1,12 @@
 /* ===== Global Variables / Common Colors ===== */
 :root {
-  --primary: #E91E63;       /* Bright Pink */
+  --primary: #ff4cb7;       /* Bright Pink */
   --primary-dark: #C2185B;
-  --secondary: #4CAF50;     /* Green */
+  --secondary: #3cf0ad;     /* Green */
   --secondary-light: #81C784;
-  --accent: #FFC107;        /* Yellow */
-  --accent-light: #FFD54F;
-  --accent-deep: #FFB300;
+  --accent: #7cb3e5;        /* Yellow */
+  --accent-light: #68a6e0;
+  --accent-deep: #3592e9;
 
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Merriweather', serif;
