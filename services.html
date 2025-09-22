@@ -1,252 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | WebCraft Pro</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | WebCraft Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container index-container">
-            <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <!-- <a href="portfolio.html">Portfolio</a> -->
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact Us</a>
+<body class="font-sans text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="text-2xl font-bold text-pink-600">WebCraft<span class="text-gray-900">Pro</span></a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-pink-600">Home</a>
+        <a href="services.html" class="hover:text-pink-600">Services</a>
+        <a href="pricing.html" class="hover:text-pink-600">Pricing</a>
+        <a href="contact.html" class="hover:text-pink-600">Contact Us</a>
+      </div>
+      <button class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-600"></span>
+        <span class="w-6 h-0.5 bg-gray-600"></span>
+        <span class="w-6 h-0.5 bg-gray-600"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Services Header -->
+  <section class="bg-gray-50 text-center py-16 relative">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
+      <p class="text-lg text-gray-600">Comprehensive solutions to build, maintain, and grow your online presence</p>
+    </div>
+  </section>
+
+  <!-- Website Development -->
+  <section id="development" class="py-16">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Professional Website Development</h2>
+        <p class="text-gray-600 mb-6">We create custom, responsive websites designed to represent your brand and convert visitors into customers. Our development process focuses on performance, user experience, and search engine optimization from the ground up.</p>
+        
+        <div class="grid sm:grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <i class="fas fa-mobile-alt text-pink-600 text-2xl mb-2"></i>
+            <h3 class="font-semibold">Mobile-First Design</h3>
+            <p class="text-sm text-gray-600">Responsive designs that look great on all devices</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-search text-pink-600 text-2xl mb-2"></i>
+            <h3 class="font-semibold">SEO Optimized</h3>
+            <p class="text-sm text-gray-600">Built with search engine visibility in mind</p>
+          </div>
+          <div class="text-center">
+            <i class="fas fa-cogs text-pink-600 text-2xl mb-2"></i>
+            <h3 class="font-semibold">Custom Functionality</h3>
+            <p class="text-sm text-gray-600">Tailored solutions for your specific needs</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold mb-4">Our Development Process</h3>
+        <ol class="space-y-4">
+          <li class="flex items-start">
+            <span class="bg-pink-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold mr-4">1</span>
+            <div>
+              <h4 class="font-semibold">Discovery & Planning</h4>
+              <p class="text-gray-600 text-sm">We learn about your business and goals to create a strategic plan</p>
             </div>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-      
-    <!-- Services Header -->
-    <section class="page-header">
-        <div id="lottie-services"></div>
-        <div class="container">
-            <h1>Our Services</h1>
-            <p>Comprehensive solutions to build, maintain, and grow your online presence</p>
-        </div>
-    </section>
-
-    <!-- Website Development -->
-    <section class="service-detail" id="development">
-        <div class="container index-container">
-            <div class="service-content">
-                <h2>Professional Website Development</h2>
-                <p>We create custom, responsive websites designed to represent your brand and convert visitors into customers. Our development process focuses on performance, user experience, and search engine optimization from the ground up.</p>
-                
-                <div class="service-features">
-                    <div class="feature">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Mobile-First Design</h3>
-                        <p>Responsive designs that look great on all devices</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-search"></i>
-                        <h3>SEO Optimized</h3>
-                        <p>Built with search engine visibility in mind</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Custom Functionality</h3>
-                        <p>Tailored solutions for your specific needs</p>
-                    </div>
-                </div>
-
-                <h3>Our Development Process</h3>
-                <ol class="process-steps">
-                    <li>
-                        <span>1</span>
-                        <h4>Discovery & Planning</h4>
-                        <p>We learn about your business and goals to create a strategic plan</p>
-                    </li>
-                    <li>
-                        <span>2</span>
-                        <h4>Design & Approval</h4>
-                        <p>You review and approve the visual design before development</p>
-                    </li>
-                    <li>
-                        <span>3</span>
-                        <h4>Development</h4>
-                        <p>Our team builds your site with regular progress updates</p>
-                    </li>
-                    <li>
-                        <span>4</span>
-                        <h4>Testing & Launch</h4>
-                        <p>Rigorous testing followed by a smooth launch</p>
-                    </li>
-                </ol>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-pink-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold mr-4">2</span>
+            <div>
+              <h4 class="font-semibold">Design & Approval</h4>
+              <p class="text-gray-600 text-sm">You review and approve the visual design before development</p>
             </div>
-            
-            <div id="lottie-webdev"></div>
-            <!-- <div class="service-image rounded">
-                <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
-                   <source src="images/web-dev.mp4" type="video/mp4">                   
-                   Your browser does not support the video tag.
-                </video>
-            </div> -->
-        </div>
-    </section>
-
-    <!-- Maintenance Services -->
-    <section class="service-detail dark" id="maintenance">
-        <div class="container index-container">
-            <div id="lottie-maintenance"></div>
-            <!-- <div class="service-image  rounded">
-                 <video width="100%" class="vid d-block w-100" autoplay muted loop plays inline poster="images/web-dev-poster.jpg">
-                   <source src="images/maintenance.mp4" type="video/mp4">
-                   Your browser does not support the video tag.
-                </video>
-            </div> -->
-            <div class="service-content">
-                <h2>Monthly Maintenance Plans</h2>
-                <p>Your website needs ongoing care to stay secure, fast, and effective. Our maintenance plans handle all the technical details so you can focus on your business.</p>
-                
-                <div class="plan-options">
-                    <div class="plan-card">
-                        <h3>Bronze</h3>
-                        <p class="price">100 AED<span>/mo</span></p>
-                        <ul> 
-                            <li><i class="fas fa-check"></i> Hosting + SSL</li>
-                            <li><i class="fas fa-check"></i> Security Updates</li>
-                            <li><i class="fas fa-check"></i> Uptime Monitoring</li>
-                            <li><i class="fas fa-check"></i> One Update Per Month</li>
-                        </ul>
-                    </div>
-                    <div class="plan-card featured">
-                        <span class="popular">Most Popular</span>
-                        <h3>Silver</h3>
-                        <p class="price">150 AED<span>/mo</span></p>
-                        <ul> 
-                            <li><i class="fas fa-check"></i> Everything in Bronze</li>
-                            <li><i class="fas fa-check"></i> Performance Optimization</li>
-                            <li><i class="fas fa-check"></i> 2–3 content changes</li>
-                            <li><i class="fas fa-check"></i> Priority Support</li>
-                        </ul>
-                    </div>
-                    <div class="plan-card">
-                        <h3>Gold</h3>
-                        <p class="price">200–250 AED<span>/mo</span></p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Everything in Silver</li>
-                            <li><i class="fas fa-check"></i> Content Updates (up to 5 hrs/mo)</li>
-                            <li><i class="fas fa-check"></i> SEO Maintenance</li>
-                        </ul>
-                    </div>
-                </div>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-pink-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold mr-4">3</span>
+            <div>
+              <h4 class="font-semibold">Development</h4>
+              <p class="text-gray-600 text-sm">Our team builds your site with regular progress updates</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Additional Services -->
-    <!-- <section class="additional-services">
-        <div class="container">
-            <h2>Additional Services</h2>
-            <div class="services-grid">
-                <div class="service-card" id="seo">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>SEO Services</h3>
-                    <p>Improve your search rankings and attract more qualified traffic with our comprehensive SEO strategies.</p>
-                    <a href="contact.html">Get SEO Help <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card" id="hosting">
-                    <i class="fas fa-server"></i>
-                    <h3>Hosting Solutions</h3>
-                    <p>Fast, secure, and reliable hosting with 99.9% uptime guarantee and expert support.</p>
-                    <a href="contact.html">Explore Hosting <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h3>Content Creation</h3>
-                    <p>Professional copywriting and visual content to engage your audience and drive conversions.</p>
-                    <a href="contact.html">Boost Your Content <i class="fas fa-arrow-right"></i></a>
-                </div>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-pink-600 text-white w-8 h-8 flex items-center justify-center rounded-full font-bold mr-4">4</span>
+            <div>
+              <h4 class="font-semibold">Testing & Launch</h4>
+              <p class="text-gray-600 text-sm">Rigorous testing followed by a smooth launch</p>
             </div>
-        </div>
-    </section> -->
+          </li>
+        </ol>
+      </div>
+      <div id="lottie-webdev" class="w-full h-80"></div>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="service-cta">
-        <div class="container">
-            <h2>Ready to Discuss Your Project?</h2>
-            <p>We'll help you determine the perfect solution for your business needs.</p>
-            <a href="contact.html" class="btn primary">Get Your Free Consultation</a>
+  <!-- Maintenance Services -->
+  <section id="maintenance" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6 items-center">
+      <div id="lottie-maintenance" class="w-full h-80"></div>
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Monthly Maintenance Plans</h2>
+        <p class="mb-6 text-gray-300">Your website needs ongoing care to stay secure, fast, and effective. Our maintenance plans handle all the technical details so you can focus on your business.</p>
+        
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="font-semibold text-lg">Bronze</h3>
+            <p class="text-pink-400 font-bold text-xl mb-4">100 AED<span class="text-sm">/mo</span></p>
+            <ul class="space-y-2 text-sm">
+              <li><i class="fas fa-check text-pink-500"></i> Hosting + SSL</li>
+              <li><i class="fas fa-check text-pink-500"></i> Security Updates</li>
+              <li><i class="fas fa-check text-pink-500"></i> Uptime Monitoring</li>
+              <li><i class="fas fa-check text-pink-500"></i> One Update Per Month</li>
+            </ul>
+          </div>
+          <div class="bg-pink-600 p-6 rounded-lg relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-pink-600 text-xs px-2 py-1 rounded-full">Most Popular</span>
+            <h3 class="font-semibold text-lg">Silver</h3>
+            <p class="text-white font-bold text-xl mb-4">150 AED<span class="text-sm">/mo</span></p>
+            <ul class="space-y-2 text-sm">
+              <li><i class="fas fa-check text-white"></i> Everything in Bronze</li>
+              <li><i class="fas fa-check text-white"></i> Performance Optimization</li>
+              <li><i class="fas fa-check text-white"></i> 2–3 content changes</li>
+              <li><i class="fas fa-check text-white"></i> Priority Support</li>
+            </ul>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="font-semibold text-lg">Gold</h3>
+            <p class="text-pink-400 font-bold text-xl mb-4">200–250 AED<span class="text-sm">/mo</span></p>
+            <ul class="space-y-2 text-sm">
+              <li><i class="fas fa-check text-pink-500"></i> Everything in Silver</li>
+              <li><i class="fas fa-check text-pink-500"></i> Content Updates (5 hrs/mo)</li>
+              <li><i class="fas fa-check text-pink-500"></i> SEO Maintenance</li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-       <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
-                    <p>Professional website development and maintenance services to help your business thrive online.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services.html#development">Website Development</a></li>
-                        <li><a href="services.html#maintenance">Monthly Maintenance</a></li>
-                        <li><a href="services.html#seo">SEO Services</a></li>
-                        <li><a href="services.html#hosting">Hosting Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <!-- <p><i class="fas fa-map-marker-alt"></i> 123 Web Street, Digital City</p> -->
-                    <p><i class="fas fa-phone"></i> +971 503123570</p>
-                    <p><i class="fas fa-envelope"></i> gokulrajgrkr@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 WebCraft Pro. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <!-- CTA Section -->
+  <section class="bg-pink-600 text-white text-center py-16">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Ready to Discuss Your Project?</h2>
+      <p class="mb-6">We'll help you determine the perfect solution for your business needs.</p>
+      <a href="contact.html" class="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Get Your Free Consultation</a>
+    </div>
+  </section>
 
-    
-    <script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      <div>
+        <a href="index.html" class="text-2xl font-bold text-pink-600">WebCraft<span class="text-white">Pro</span></a>
+        <p class="mt-4 text-sm">Professional website development and maintenance services to help your business thrive online.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4">Services</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="services.html#development" class="hover:text-white">Website Development</a></li>
+          <li><a href="services.html#maintenance" class="hover:text-white">Monthly Maintenance</a></li>
+          <li><a href="services.html#seo" class="hover:text-white">SEO Services</a></li>
+          <li><a href="services.html#hosting" class="hover:text-white">Hosting Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-4">Contact Us</h3>
+        <p class="text-sm"><i class="fas fa-phone mr-2"></i>+971 503123570</p>
+        <p class="text-sm"><i class="fas fa-envelope mr-2"></i>gokulrajgrkr@gmail.com</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center">
+      <p>&copy; 2023 WebCraft Pro. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#"><i class="fab fa-facebook-f hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-instagram hover:text-white"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-services'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-service.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-webdev'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-webdev.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-maintenance'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-maintenance.json'
+    });
+  </script>
 </body>
 </html>
-
-<script>
-  lottie.loadAnimation({
-    container: document.getElementById('lottie-services'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'images/anime-service.json' 
-  });
-
-    lottie.loadAnimation({
-    container: document.getElementById('lottie-webdev'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'images/anime-webdev.json' 
-  });
-
-    lottie.loadAnimation({
-    container: document.getElementById('lottie-maintenance'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'images/anime-maintenance.json' 
-  });
-
-</script>

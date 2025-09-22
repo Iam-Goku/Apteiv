@@ -1,181 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | WebCraft Pro</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | WebCraft Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
 </head>
-<body>
-      <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container index-container">
-            <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <!-- <a href="portfolio.html">Portfolio</a> -->
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact Us</a>
+<body class="font-sans text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="text-2xl font-bold text-pink-600">WebCraft<span class="text-gray-900">Pro</span></a>
+      <div class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="hover:text-pink-600">Home</a>
+        <a href="services.html" class="hover:text-pink-600">Services</a>
+        <a href="pricing.html" class="hover:text-pink-600">Pricing</a>
+        <a href="contact.html" class="text-pink-600 font-semibold">Contact Us</a>
+      </div>
+      <button class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Header -->
+  <section class="relative bg-gray-50 pt-28 pb-16 text-center">
+    <div id="lottie-contact" class="mx-auto w-40 h-40"></div>
+    <div class="max-w-2xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Let's Talk About Your Project</h1>
+      <p class="text-gray-600">We're here to answer your questions and discuss how we can help your business grow online</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6">
+
+      <!-- Contact Form -->
+      <div class="bg-gray-50 rounded-2xl shadow p-8">
+        <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
+        <form id="contactForm" class="space-y-5">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Your Name*</label>
+            <input type="text" id="name" name="name" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Email Address*</label>
+            <input type="email" id="email" name="email" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+          </div>
+          <div>
+            <label for="service" class="block text-sm font-medium mb-1">Service Interested In</label>
+            <select id="service" name="service"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+              <option value="">Select a service</option>
+              <option value="website">Website Development</option>
+              <option value="maintenance">Monthly Maintenance</option>
+              <option value="seo">SEO Services</option>
+              <option value="hosting">Hosting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium mb-1">Your Message*</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none"></textarea>
+          </div>
+          <button type="submit"
+            class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-phone text-pink-600 text-lg mt-1"></i>
+              <div>
+                <h3 class="font-semibold">Phone</h3>
+                <p><a href="tel:+971503123570" class="text-pink-600">+971 503123570</a></p>
+                <p class="text-sm text-gray-600">Mon-Fri: 9am-5pm</p>
+              </div>
             </div>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Contact Header -->
-    <section class="page-header contact-header">
-        <div id="lottie-contact"></div>
-        <div class="container">
-            <h1>Let's Talk About Your Project</h1>
-            <p>We're here to answer your questions and discuss how we can help your business grow online</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container index-container">
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name*</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address*</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service Interested In</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option value="website">Website Development</option>
-                            <option value="maintenance">Monthly Maintenance</option>
-                            <option value="seo">SEO Services</option>
-                            <option value="hosting">Hosting</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Your Message*</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn primary">Send Message</button>
-                </form>
+            <div class="flex items-start space-x-3">
+              <i class="fas fa-envelope text-pink-600 text-lg mt-1"></i>
+              <div>
+                <h3 class="font-semibold">Email</h3>
+                <p><a href="mailto:gokulrajgrkr@gmail.com" class="text-pink-600">gokulrajgrkr@gmail.com</a></p>
+                <p class="text-sm text-gray-600">Response within 24 hours</p>
+              </div>
             </div>
-            
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <!-- <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Our Office</h3>
-                    <p>123 Web Street<br>Digital City, DC 12345</p>
-                </div> -->
-                
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+971503123570">+971 503123570</a></p>
-                    <p>Mon-Fri: 9am-5pm </p>
-                </div>
-                
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p><a href="gokulrajgrkr@gmail.com">gokulrajgrkr@gmail.com</a></p>
-                    <p>Response within 24 hours</p>
-                </div>
-                
-                <!-- <div class="info-item">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Schedule a Call</h3>
-                    <p>Book a time that works for you:</p>
-                    <a href="https://calendly.com/webcraftpro/consultation" class="btn secondary" target="_blank">Book Online</a>
-                </div> -->
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Map Section -->
-    <!-- <section class="map-section">
-        <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256018981!2d-73.9878446845938!3d40.75798597932683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzI4LjciTiA3M8KwNTknMTQuMiJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section> -->
+    </div>
+  </section>
 
-    <!-- Contact CTA -->
-    <!-- <section class="contact-cta">
-        <div class="container">
-            <h2>Not Sure What You Need?</h2>
-            <p>Take our quick 2-minute quiz to discover the perfect solution for your business.</p>
-            <a href="#" class="btn primary">Take the Website Quiz</a>
-        </div>
-    </section> -->
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <a href="index.html" class="text-2xl font-bold text-pink-600">WebCraft<span class="text-white">Pro</span></a>
+        <p class="mt-4 text-sm">Professional website development and maintenance services to help your business thrive online.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="services.html#development" class="hover:text-pink-500">Website Development</a></li>
+          <li><a href="services.html#maintenance" class="hover:text-pink-500">Monthly Maintenance</a></li>
+          <li><a href="services.html#seo" class="hover:text-pink-500">SEO Services</a></li>
+          <li><a href="services.html#hosting" class="hover:text-pink-500">Hosting Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Contact Us</h3>
+        <p><i class="fas fa-phone mr-2"></i> +971 503123570</p>
+        <p><i class="fas fa-envelope mr-2"></i> gokulrajgrkr@gmail.com</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between px-6">
+      <p class="text-sm">&copy; 2023 WebCraft Pro. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-pink-500"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-pink-500"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-pink-500"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <a href="index.html" class="logo">WebCraft<span>Pro</span></a>
-                    <p>Professional website development and maintenance services to help your business thrive online.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="services.html#development">Website Development</a></li>
-                        <li><a href="services.html#maintenance">Monthly Maintenance</a></li>
-                        <li><a href="services.html#seo">SEO Services</a></li>
-                        <li><a href="services.html#hosting">Hosting Solutions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <!-- <p><i class="fas fa-map-marker-alt"></i> 123 Web Street, Digital City</p> -->
-                    <p><i class="fas fa-phone"></i> +971 503123570</p>
-                    <p><i class="fas fa-envelope"></i> gokulrajgrkr@gmail.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 WebCraft Pro. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-contact'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-contact.json'
+    });
+  </script>
 
-    
-    <script src="js/main.js"></script>
 </body>
 </html>
-
-<script>
-        lottie.loadAnimation({
-    container: document.getElementById('lottie-contact'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'images/anime-contact.json' 
-  });
-
-</script>
