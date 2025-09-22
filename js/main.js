@@ -355,3 +355,44 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+//  Lottie Animation 
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-price'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-price.json'
+    });
+
+   lottie.loadAnimation({
+      container: document.getElementById('lottie-services'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-service.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-webdev'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-webdev.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-maintenance'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-maintenance.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-contact'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'images/anime-contact.json'
+    });
