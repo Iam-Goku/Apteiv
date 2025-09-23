@@ -449,9 +449,29 @@ darkModeBtn.addEventListener("click", () => {
 });
 
   //Hambuger Menu
-    const menuBtn = document.getElementById("menu-btn");
-  const navLinks = document.getElementById("nav-links");
+//   const menuBtn = document.getElementById('menu-btn');
+//   const navLinks = document.getElementById('nav-links');
 
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("hidden");
+//   console.log('Script loaded'); // <- check if this prints in console
+
+//   menuBtn.addEventListener('click', () => {
+//     console.log('Hamburger clicked'); // <- check if this prints
+//     navLinks.classList.toggle('hidden');
+//   });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  const bars = menuBtn.querySelectorAll('span');
+
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+
+    // Animate hamburger into X
+    bars[0].classList.toggle('rotate-45');
+    bars[0].classList.toggle('translate-y-2');
+    bars[1].classList.toggle('opacity-0');
+    bars[2].classList.toggle('-rotate-45');
+    bars[2].classList.toggle('-translate-y-2');
   });
+});
