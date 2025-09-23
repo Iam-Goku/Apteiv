@@ -396,3 +396,62 @@ document.addEventListener('DOMContentLoaded', function() {
       autoplay: true,
       path: 'images/anime-contact.json'
     });
+
+
+    // Go to Top button functionality
+  const goTopBtn = document.getElementById('goTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Show button after scrolling 300px
+      goTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      goTopBtn.classList.add('opacity-100');
+    } else {
+      goTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      goTopBtn.classList.remove('opacity-100');
+    }
+  });
+
+  goTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+
+    //Dark Mode 
+const darkModeBtn = document.getElementById("darkModeBtn");
+const body = document.body;
+
+// Load saved theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>'; // sun icon
+    } else {
+        body.classList.remove("dark-mode");
+        darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>'; // moon icon
+    }
+});
+
+// Toggle dark mode on button click
+darkModeBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        localStorage.setItem("theme", "light");
+        darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+});
+
+  //Hambuger Menu
+    const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("hidden");
+  });
