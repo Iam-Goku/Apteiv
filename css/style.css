@@ -1,17 +1,53 @@
 /* ===== Global Variables / Common Colors ===== */
 :root {
-  --primary: #ff4cb7;       /* Bright Pink */
-  --primary-dark: #d5417c;
-  --secondary: #3cf0ad;     /* Green */
-  --secondary-light: #81C784;
-  --accent: #7cb3e5;        /* Yellow */
-  --accent-light: #68a6e0;
-  --accent-deep: #3592e9;
+  /* ===== Brand Colors ===== */
+  --primary: #b3b7ff;      /* Pale Indigo - main base */
+  --primary-dark: #6a5acd;  /* Custom deep indigo for contrast (added for visibility) */
+  --secondary: #c2b7f9;     /* Dreamy Violet - secondary tone */
+  --secondary-light: #e7dbf7; /* Amethyst Tint - softer variant */
+  --accent: #c8b3ff;        /* Lavender Mist - accent color */
+  --accent-light: #dbb3ee;  /* Orchid Blush - lighter accent */
+  --accent-deep: #dc7ded;   /* Rose Quartz Glow - vivid highlight */
 
+  /* ===== Fonts & Effects ===== */
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Merriweather', serif;
   --transition: 0.3s ease-in-out;
 }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text:hover {
+  background: linear-gradient(90deg, #9da8f8, #a797f6, #b78fea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-cta {
+  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
+  color: white;
+}
+
+
+.btn-gradient {
+  background: linear-gradient(90deg, #755fe4, #c8b3ff, #d1b3f9);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #aeb8ff, #c2b7f9, #dfb3e7);
+}
+
 
 /* ===== Body & Font Defaults ===== */
 body {
