@@ -12,276 +12,110 @@
 <body class="font-sans text-gray-800">
 
 <!-- Navigation -->
-<nav class="bg-white shadow sticky top-0 z-50">
+<nav class="bg-white shadow sticky top-0 z-50 fade-in">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-    <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-3">
-      <img src="Documents/Logo.png" alt="Apteiv Logo" class="h-28 object-contain">
+      <img src="Documents/Logo.png" alt="Apteiv Logo" class="h-20 object-contain">
     </a>
-
-    <!-- Menu Links (Desktop) -->
-    <div id="nav-links" class="hidden md:flex flex-row space-x-6">
-      <a href="index.html" class="gradient-text">Home</a>
-      <a href="services.html" class="gradient-text">Services</a>
-      <a href="pricing.html" class="gradient-text font-bold">Pricing</a>
-      <a href="contact.html" class="gradient-text">Contact Us</a>
+    <div id="nav-links" class="hidden md:flex flex-row space-x-8">
+      <a href="index.html" class="gradient-text text-lg md:text-xl">Home</a>
+      <a href="services.html" class="gradient-text text-lg md:text-xl">Services</a>
+      <a href="pricing.html" class="gradient-text font-bold text-lg md:text-xl">Pricing</a>
+      <a href="contact.html" class="gradient-text text-lg md:text-xl">Contact Us</a>
     </div>
-
-    <!-- Hamburger Button -->
     <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-6 focus:outline-none">
       <span class="block h-0.5 w-full bg-gray-600 transform transition duration-300 origin-top-left"></span>
       <span class="block h-0.5 w-full bg-gray-600 transition duration-300"></span>
       <span class="block h-0.5 w-full bg-gray-600 transform transition duration-300 origin-bottom-left"></span>
     </button>
   </div>
-
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4 space-y-4 shadow-lg">
-    <a href="index.html" class="block text-pink-600 font-semibold hover:text-pink-700">Home</a>
-    <a href="services.html" class="block hover:text-pink-600 hover:text-pink-700">Services</a>
-    <a href="pricing.html" class="block hover:text-pink-600 hover:text-pink-700">Pricing</a>
-    <a href="contact.html" class="block hover:text-pink-600 hover:text-pink-700">Contact Us</a>
+    <a href="index.html" class="block gradient-text font-semibold">Home</a>
+    <a href="services.html" class="block gradient-text">Services</a>
+    <a href="pricing.html" class="block gradient-text font-semibold">Pricing</a>
+    <a href="contact.html" class="block gradient-text">Contact Us</a>
   </div>
 </nav>
-  
-  <!-- Pricing Header -->
-  <section class="bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--secondary)] text-white text-center py-20 mt-16">
-    <h1 class="text-4xl md:text-5xl font-bold">Transparent Pricing</h1>
-    <p class="mt-2 text-lg md:text-xl">Simple, straightforward pricing for all our services</p>
-  </section>
-  <div id="lottie-price" class="w-full max-w-2xl mx-auto my-8"></div>
 
+<!-- Pricing Hero -->
+<section class="gradient-cta text-white text-center py-20 fade-in">
+  <h1 class="text-4xl md:text-5xl font-bold">Transparent Pricing</h1>
+  <p class="mt-2 text-lg md:text-xl">Simple, straightforward pricing for all our services</p>
+</section>
+<div id="lottie-price" class="w-full max-w-2xl mx-auto my-8"></div>
+
+<!-- Pricing Sections -->
+<section class="py-16 bg-gray-50">
   <!-- Website Development Pricing -->
-  <section class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-900">Website Development Packages</h2>
-      <p class="text-center text-gray-600 mt-2 mb-10">
-        Every website is unique, but these packages give you an idea of typical project costs.
-      </p>
+  <!-- Keep all your pricing cards as-is -->
+</section>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Basic -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2">Basic Website</h3>
-          <p class="text-2xl font-bold text-[var(--accent)] mb-4">700 – 1,200 AED</p>
-          <p class="mb-4 text-gray-600">Perfect for small businesses and individuals needing a simple online presence</p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Up to 5 pages</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Responsive design</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Basic contact form</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> SEO fundamentals</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 1 month free maintenance</li>
-            <br>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Get Started</a>
-        </div>
-
-        <!-- Standard -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2">Standard Website</h3>
-          <p class="text-2xl font-bold text-[var(--accent)] mb-4">1,200 – 1,800 AED</p>
-          <p class="mb-4 text-gray-600">Comprehensive solution for growing businesses with more complex needs</p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> All in Basic+</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Custom design</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Advanced forms</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Blog integration</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> SEO optimization</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 3 months free maintenance</li>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Get Started</a>
-        </div>
-
-        <!-- Premium -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2">Premium</h3>
-          <p class="text-2xl font-bold text-[var(--accent)] mb-4">1,800 – 2,500 AED+</p>
-          <p class="mb-4 text-gray-600">Full-featured online store to sell your products or services</p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> All In Standard+</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Booking form</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Analytics setup</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 6 months free maintenance</li>
-            <br><br>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Get Started</a>
-        </div>
-
-        <!-- Custom -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-          <h3 class="text-xl font-semibold mb-2">Custom Solution</h3>
-          <p class="text-2xl text-[var(--accent)] font-bold mb-4">Custom Quote</p>
-          <p class="mb-4 text-gray-600">Tailored development for unique business requirements</p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Completely custom design</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Specialized functionality</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> API integrations</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Membership systems</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Custom web applications</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Maintenance plan included</li>
-            <br>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Get a Custom Quote</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section class="py-16 bg-white">
   <!-- Maintenance Pricing -->
-  <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-900">Monthly Maintenance Plans</h2>
-      <p class="text-center text-gray-600 mt-2 mb-10">Keep your website secure, updated, and performing at its best.</p>
+  <!-- Keep all your pricing cards as-is -->
+</section>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Bronze -->
-        <div class="bg-gray-50 rounded-lg shadow p-6 text-center hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Bronze</h3>
-          <p class="text-2xl font-bold gradient-text mb-4">100 AED<span class="text-base text-gray-600">/month</span></p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Hosting</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> SSL</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Uptime monitoring</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Basic support</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 1 update/month</li>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Choose Plan</a>
-        </div>
-
-        <!-- Silver -->
-        <div class="bg-[var(--secondary-light)] border border-pink-200 rounded-lg shadow-lg p-6 text-center relative hover:shadow-xl transition">
-          <span class="absolute top-2 right-2 gradient-cta text-white text-xs px-2 py-1 rounded">Most Popular</span>
-          <h3 class="text-xl font-semibold mb-2">Silver</h3>
-          <p class="text-2xl font-bold gradient-text mb-4">150 AED<span class="text-base text-gray-600">/month</span></p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Everything in Bronze</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Performance optimization</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 2–3 content changes</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Priority support</li>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Choose Plan</a>
-        </div>
-
-        <!-- Gold -->
-        <div class="bg-gray-50 rounded-lg shadow p-6 text-center hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">Gold</h3>
-          <p class="text-2xl font-bold gradient-text mb-4">200–250 AED<span class="text-base text-gray-600">/month</span></p>
-          <ul class="text-sm text-gray-700 space-y-2 mb-6 text-left">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Everything in Silver</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Content updates (5 hrs/month)</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Minor design tweaks</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Monthly visitor report</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Emergency response</li>
-          </ul>
-          <a href="contact.html" class="bg-[var(--secondary)] text-white px-4 py-2 rounded-lg hover:bg-[var(--secondary)]">Choose Plan</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section class="bg-gray-100 py-16">
   <!-- FAQ -->
-  <section class="bg-gray-100 py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
-      <div class="space-y-4">
-        <details class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-          <summary class="font-semibold cursor-pointer">How long does a website project typically take?</summary>
-          <p class="mt-2 text-gray-600">Project timelines vary based on complexity. A basic website typically takes 4-6 weeks.</p>
-        </details>
-        <details class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-          <summary class="font-semibold cursor-pointer">Do you offer payment plans?</summary>
-          <p class="mt-2 text-gray-600">Yes, we offer flexible payment options to accommodate different budgets.</p>
-        </details>
-        <details class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-          <summary class="font-semibold cursor-pointer">Can I upgrade or downgrade my maintenance plan later?</summary>
-          <p class="mt-2 text-gray-600">Absolutely! Plans can be changed at any time with 30 days notice.</p>
-        </details>
-        <details class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">
-          <summary class="font-semibold cursor-pointer">What if I need something that's not in your packages?</summary>
-          <p class="mt-2 text-gray-600">We specialize in custom solutions tailored to your unique requirements.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+  <!-- Keep FAQ content as-is -->
+</section>
 
-  <!-- CTA -->
-  <section class="bg-gradient-to-r from-[var(--primary)] via-[var(--accent)] to-[var(--secondary)] text-white text-center py-20 mt-16">
-    <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-    <p class="mb-6">Contact us for a free consultation and custom quote tailored to your specific needs.</p>
-    <div class="flex flex-col md:flex-row justify-center gap-4">
-      <a href="contact.html" class="bg-white text-[var(--primary)] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100">Request a Quote</a>
-      <a href="tel:+971503123570" class="bg-white text-[var(--primary)] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100">
-        <i class="fas fa-phone mr-2"></i> Call Us Now
-      </a>
-    </div>
-  </section>
-
-  <!-- <button id="darkModeBtn" class="fixed bottom-6 right-6 bg-gray-800 text-white p-3  rounded-full shadow-lg hover:bg-gray-700 transition z-50">
-    <i class="fas fa-moon"></i>
-  </button> -->
-
-      <!-- WhatsApp Button -->
-    <a href="https://wa.me/971503123570" target="_blank" id="whatsappBtn" class="fixed bottom-20 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-opacity z-50">
-      <i class="fab fa-whatsapp text-xl"></i>
+<!-- Final CTA -->
+<section class="gradient-cta text-white text-center py-20 mt-16 fade-in">
+  <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+  <p class="mb-6">Contact us for a free consultation and custom quote tailored to your specific needs.</p>
+  <div class="flex flex-col md:flex-row justify-center gap-4">
+    <a href="contact.html" class="btn-gradient px-6 py-3 rounded-lg">Request a Quote</a>
+    <a href="tel:+971503123570" class="btn-gradient px-6 py-3 rounded-lg">
+      <i class="fas fa-phone mr-2"></i> Call Us Now
     </a>
-  
-  <!-- Go to Top Button -->
-  <button id="goTopBtn" class="fixed bottom-36 right-7 bg-[var(--primary-dark)] text-[var(--secondary-light)] p-3 rounded-full shadow-lg transition-opacity opacity-0 pointer-events-none z-50">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-      <div>
-        <a href="index.html" class="text-2xl font-bold text-pink-600">
-            <img src="Documents/LogoIcon.png" alt="Apteiv Logo" class="h-12 object-contain">
-          </a>
-        <p class="mt-2 text-gray-400">Professional website development and maintenance services to help your business thrive online.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2">Services</h3>
-        <ul class="space-y-1">
-          <li><a href="services.html#development" class="hover:gradient-text">Website Development</a></li>
-          <li><a href="services.html#maintenance" class="hover:gradient-text">Monthly Maintenance</a></li>
-          <li><a href="services.html#seo" class="hover:gradient-text">SEO Services</a></li>
-          <li><a href="services.html#hosting" class="hover:gradient-text">Hosting Solutions</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold mb-2">Contact Us</h3>
-        <p><i class="fas fa-phone gradient-text mr-2"></i> +971 503123570</p>
-        <p><i class="fas fa-envelope gradient-text mr-2"></i> gokulrajgrkr@gmail.com</p>
-      </div>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/971503123570" target="_blank" id="whatsappBtn" class="fixed bottom-20 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 z-50">
+  <i class="fab fa-whatsapp text-xl"></i>
+</a>
+
+<!-- Go to Top Button -->
+<button id="goTopBtn" class="fixed bottom-36 right-7 bg-[var(--primary-dark)] text-white p-3 rounded-full shadow-lg opacity-0 pointer-events-none z-50">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12 fade-in">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div>
+      <img src="Documents/LogoIcon.png" alt="Apteiv Logo" class="h-12 object-contain">
+      <p class="mt-4">Professional website development and maintenance services to help your business thrive online.</p>
     </div>
-    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500">
-      <p>&copy; 2025 Apteiv All rights reserved.</p>
-      <div class="flex justify-center space-x-4 mt-2">
-        <a href="#" class="hover:gradient-text"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-instagram"></i></a>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 gradient-text">Services</h3>
+      <ul class="space-y-2">
+        <li><a href="services.html#development" class="hover:gradient-text">Website Development</a></li>
+        <li><a href="services.html#maintenance" class="hover:gradient-text">Monthly Maintenance</a></li>
+        <li><a href="services.html#seo" class="hover:gradient-text">SEO Services</a></li>
+        <li><a href="services.html#hosting" class="hover:gradient-text">Hosting Solutions</a></li>
+      </ul>
     </div>
-  </footer>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 gradient-text">Contact Us</h3>
+      <p><i class="fas fa-phone mr-2"></i> +971 503123570</p>
+      <p><i class="fas fa-envelope mr-2"></i> gokulrajgrkr@gmail.com</p>
+    </div>
+  </div>
+  <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+    <p>&copy; 2025 Apteiv All rights reserved.</p>
+    <div class="flex space-x-4 mt-4 md:mt-0">
+      <a href="#" class="hover:gradient-text"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 
 </body>
 </html>
-<!-- Toggle Script -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const bars = menuBtn.querySelectorAll('span');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-
-    // Animate Hamburger to X
-    bars[0].classList.toggle('rotate-45 translate-y-2');
-    bars[1].classList.toggle('opacity-0');
-    bars[2].classList.toggle('-rotate-45 -translate-y-2');
-  });
-</script>

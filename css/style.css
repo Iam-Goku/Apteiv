@@ -1,53 +1,21 @@
 /* ===== Global Variables / Common Colors ===== */
 :root {
   /* ===== Brand Colors ===== */
-  --primary: #b3b7ff;      /* Pale Indigo - main base */
-  --primary-dark: #6a5acd;  /* Custom deep indigo for contrast (added for visibility) */
-  --secondary: #c2b7f9;     /* Dreamy Violet - secondary tone */
-  --secondary-light: #e7dbf7; /* Amethyst Tint - softer variant */
-  --accent: #c8b3ff;        /* Lavender Mist - accent color */
-  --accent-light: #dbb3ee;  /* Orchid Blush - lighter accent */
-  --accent-deep: #dc7ded;   /* Rose Quartz Glow - vivid highlight */
+  --primary: #b3b7ff;        /* Pale Indigo */
+  --primary-dark: #6a5acd;   /* Deep Indigo */
+  --secondary: #c2b7f9;      /* Dreamy Violet */
+  --secondary-light: #e7dbf7;/* Amethyst Tint */
+  --accent: #c8b3ff;         /* Lavender Mist */
+  --accent-light: #dbb3ee;   /* Orchid Blush */
+  --accent-deep: #dc7ded;    /* Rose Quartz Glow */
 
   /* ===== Fonts & Effects ===== */
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Merriweather', serif;
   --transition: 0.3s ease-in-out;
+  --radius: 1rem;
+  --shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
-
-/* Gradient text utility */
-.gradient-text {
-  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.gradient-text:hover {
-  background: linear-gradient(90deg, #9da8f8, #a797f6, #b78fea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-cta {
-  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
-  color: white;
-}
-
-
-.btn-gradient {
-  background: linear-gradient(90deg, #755fe4, #c8b3ff, #d1b3f9);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease-in-out;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(90deg, #aeb8ff, #c2b7f9, #dfb3e7);
-}
-
 
 /* ===== Body & Font Defaults ===== */
 body {
@@ -55,151 +23,18 @@ body {
   color: #333;
   line-height: 1.6;
   background-color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* ===== Headings ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  color: var(--primary-dark);
-  margin-bottom: 0.5rem;
-}
-
-/* ===== Links ===== */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-
-a:hover {
-  color: var(--primary-dark);
-}
-
-/* ===== Buttons Common Styles ===== */
-.btn {
-  display: inline-block;
-  padding: 0.65rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.btn.primary {
-  background-color: var(--primary);
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background-color: var(--primary-dark);
-}
-
-.btn.secondary {
-  background-color: var(--secondary);
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background-color: var(--secondary-light);
-}
-
-/* ===== Utility Classes ===== */
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-3 { margin-bottom: 1rem; }
-.mb-4 { margin-bottom: 1.5rem; }
-.mb-5 { margin-bottom: 2rem; }
-
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-3 { margin-top: 1rem; }
-.mt-4 { margin-top: 1.5rem; }
-.mt-5 { margin-top: 2rem; }
-
-.rounded { border-radius: 0.5rem; }
-.shadow { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-
-/* ===== Forms Common Styles ===== */
-input, textarea, select {
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  width: 100%;
-  transition: border-color var(--transition);
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: var(--primary);
-  outline: none;
-}
-
-/* ===== Section & Container Defaults ===== */
-section {
-  padding: 4rem 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== Responsive Media Queries (common) ===== */
-@media (max-width: 1024px) {
-  .container { width: 95%; }
-}
-
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1.1rem; }
-}
-
-
-/* Dark Mode Variables */
+/* ===== Dark Mode ===== */
 body.dark-mode {
-
-  background-color: #121212;  /* Dark background */
-  color: #f5f5f5;             /* Light text */
-
-  
+  background-color: #121212;
+  color: #f5f5f5;
 }
-
-body.dark-mode section {
-   color: #121212;       
-   background-color: #121212;
+body.dark-mode .card {
+  background: rgba(30,30,30,0.9);
+  color: #fff;
 }
-
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
-body.dark-mode h6 {
-  /* color: var(--primary);  */
-}
-
-/* body.dark-mode a {
-  color: var(--secondary);
-}
-
-body.dark-mode a:hover {
-  color: var(--accent-deep);
-} */
-
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
@@ -208,8 +43,155 @@ body.dark-mode select {
   color: #fff;
 }
 
-body.dark-mode input:focus,
-body.dark-mode textarea:focus,
-body.dark-mode select:focus {
-  /* border-color: var(--secondary); */
+/* ===== Gradients ===== */
+.gradient-text {
+  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: background 0.3s ease-in-out;
+}
+.gradient-text:hover {
+  background: linear-gradient(90deg, #9da8f8, #a797f6, #b78fea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-cta {
+  background: linear-gradient(90deg, #C28BEA, #c8b3ff, #f490b1);
+  color: #fff;
+  transition: all var(--transition);
+}
+
+/* ===== Buttons ===== */
+.btn-gradient {
+  background: linear-gradient(90deg, #755fe4, #c8b3ff, #d1b3f9);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: all var(--transition);
+}
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #aeb8ff, #c2b7f9, #dfb3e7);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== Animations ===== */
+.fade-in { animation: fadeIn 1s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.scale-hover:hover {
+  transform: scale(1.05);
+  transition: transform var(--transition);
+}
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--transition);
+}
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background: url('Documents/hero-bg.jpg') center/cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(20,20,40,0.8));
+  z-index: 0;
+}
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Form Inputs ===== */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-dark);
+  outline: none;
+}
+input.error, textarea.error, select.error {
+  border-color: #e74c3c;
+}
+
+/* ===== Steps / Badges ===== */
+.step-badge {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* ===== Dark Mode Overrides for Buttons and Gradients ===== */
+body.dark-mode .btn-gradient {
+  background: linear-gradient(90deg, #5a4bbf, #8c7fdc, #a589f1);
+  color: #fff;
+}
+body.dark-mode .gradient-cta {
+  background: linear-gradient(90deg, #7a4bbb, #a68cf1, #f48bd9);
+}
+
+/* ===== Utility Classes ===== */
+.text-center { text-align: center; }
+.text-white { color: #fff; }
+.bg-white { background-color: #fff; }
+.bg-gray-50 { background-color: #f9f9f9; }
+.rounded-lg { border-radius: 0.75rem; }
+.rounded-xl { border-radius: 1rem; }
+.shadow { box-shadow: var(--shadow); }
+.shadow-lg { box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
+.p-6 { padding: 1.5rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* ===== Tables / Lists ===== */
+ul.list-disc { list-style-type: disc; }
+ul.list-inside { padding-left: 1rem; }
+
+/* ===== Responsive Helpers ===== */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr !important; }
 }

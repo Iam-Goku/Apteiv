@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Connect Codex</title>
+  <title>Contact Us | Apteiv</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,185 +12,156 @@
 <body class="font-sans text-gray-800">
 
 <!-- Navigation -->
-<nav class="bg-white shadow sticky top-0 z-50">
+<nav class="bg-white shadow sticky top-0 z-50 fade-in">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-    <!-- Logo -->
     <a href="index.html" class="flex items-center space-x-3">
-      <img src="Documents/Logo.png" alt="Apteiv Logo" class="h-28 object-contain">
+      <img src="Documents/Logo.png" alt="Apteiv Logo" class="h-20 object-contain">
     </a>
-
-    <!-- Menu Links (Desktop) -->
-    <div id="nav-links" class="hidden md:flex flex-row space-x-6">
-      <a href="index.html" class="gradient-text">Home</a>
-      <a href="services.html" class="gradient-text">Services</a>
-      <a href="pricing.html" class="gradient-text">Pricing</a>
-      <a href="contact.html" class="gradient-text font-bold">Contact Us</a>
+    <div id="nav-links" class="hidden md:flex flex-row space-x-8">
+      <a href="index.html" class="gradient-text text-lg md:text-xl">Home</a>
+      <a href="services.html" class="gradient-text text-lg md:text-xl">Services</a>
+      <a href="pricing.html" class="gradient-text text-lg md:text-xl">Pricing</a>
+      <a href="contact.html" class="gradient-text font-bold text-lg md:text-xl">Contact Us</a>
     </div>
-
-    <!-- Hamburger Button -->
     <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-6 focus:outline-none">
       <span class="block h-0.5 w-full bg-gray-600 transform transition duration-300 origin-top-left"></span>
       <span class="block h-0.5 w-full bg-gray-600 transition duration-300"></span>
       <span class="block h-0.5 w-full bg-gray-600 transform transition duration-300 origin-bottom-left"></span>
     </button>
   </div>
-
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4 space-y-4 shadow-lg">
-    <a href="index.html" class="block text-pink-600 font-semibold hover:text-pink-700">Home</a>
-    <a href="services.html" class="block hover:text-pink-600 hover:text-pink-700">Services</a>
-    <a href="pricing.html" class="block hover:text-pink-600 hover:text-pink-700">Pricing</a>
-    <a href="contact.html" class="block hover:text-pink-600 hover:text-pink-700">Contact Us</a>
+    <a href="index.html" class="block gradient-text font-semibold">Home</a>
+    <a href="services.html" class="block gradient-text">Services</a>
+    <a href="pricing.html" class="block gradient-text">Pricing</a>
+    <a href="contact.html" class="block gradient-text font-semibold">Contact Us</a>
   </div>
 </nav>
 
-  <!-- Contact Header -->
-  <section class="relative bg-gray-50 pt-28 pb-16 text-center">
-    <div id="lottie-contact" class="mx-auto w-40 h-40"></div>
-    <div class="max-w-2xl mx-auto px-4">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Let's Talk About Your Project</h1>
-      <p class="text-gray-600">We're here to answer your questions and discuss how we can help your business grow online</p>
-    </div>
-  </section>
+<!-- Contact Hero -->
+<section class="relative bg-gray-50 pt-28 pb-16 text-center fade-in">
+  <div id="lottie-contact" class="mx-auto w-40 h-40"></div>
+  <div class="max-w-2xl mx-auto px-4">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Let's Talk About Your Project</h1>
+    <p class="text-gray-600">We're here to answer your questions and discuss how we can help your business grow online</p>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6">
+<!-- Contact Section -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 px-6">
 
-      <!-- Contact Form -->
-      <div class="bg-gray-50 rounded-2xl shadow p-8">
-        <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
-        <form id="contactForm" class="space-y-5">
-          <div>
-            <label for="name" class="block text-sm font-medium mb-1">Your Name*</label>
-            <input type="text" id="name" name="name" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium mb-1">Email Address*</label>
-            <input type="email" id="email" name="email" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
-          </div>
-          <div>
-            <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
-            <input type="tel" id="phone" name="phone"
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
-          </div>
-          <div>
-            <label for="service" class="block text-sm font-medium mb-1">Service Interested In</label>
-            <select id="service" name="service"
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
-              <option value="">Select a service</option>
-              <option value="website">Website Development</option>
-              <option value="maintenance">Monthly Maintenance</option>
-              <option value="seo">SEO Services</option>
-              <option value="hosting">Hosting</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium mb-1">Your Message*</label>
-            <textarea id="message" name="message" rows="5" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none"></textarea>
-          </div>
-          <button type="submit"
-            class="bg-pink-600 text-white px-6 py-3 rounded-lg hover:bg-pink-700 transition">Send Message</button>
-        </form>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="space-y-8">
+    <!-- Contact Form -->
+    <div class="bg-gray-50 rounded-2xl shadow p-8">
+      <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
+      <form id="contactForm" class="space-y-5">
         <div>
-          <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
-          <div class="space-y-6">
-            <div class="flex items-start space-x-3">
-              <i class="fas fa-phone text-pink-600 text-lg mt-1"></i>
-              <div>
-                <h3 class="font-semibold">Phone</h3>
-                <p><a href="tel:+971503123570" class="text-pink-600">+971 503123570</a></p>
-                <p class="text-sm text-gray-600">Mon-Fri: 9am-5pm</p>
-              </div>
+          <label for="name" class="block text-sm font-medium mb-1">Your Name*</label>
+          <input type="text" id="name" name="name" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1">Email Address*</label>
+          <input type="email" id="email" name="email" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
+          <input type="tel" id="phone" name="phone"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="service" class="block text-sm font-medium mb-1">Service Interested In</label>
+          <select id="service" name="service"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none">
+            <option value="">Select a service</option>
+            <option value="website">Website Development</option>
+            <option value="maintenance">Monthly Maintenance</option>
+            <option value="seo">SEO Services</option>
+            <option value="hosting">Hosting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1">Your Message*</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pink-500 focus:outline-none"></textarea>
+        </div>
+        <button type="submit"
+          class="bg-[var(--secondary)] text-white px-6 py-3 rounded-lg hover:bg-[var(--secondary-dark)] transition">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Contact Information</h2>
+        <div class="space-y-6">
+          <div class="flex items-start space-x-3">
+            <i class="fas fa-phone text-[var(--primary)] text-lg mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Phone</h3>
+              <p><a href="tel:+971503123570" class="text-[var(--primary)]">+971 503123570</a></p>
+              <p class="text-sm text-gray-600">Mon-Fri: 9am-5pm</p>
             </div>
-            <div class="flex items-start space-x-3">
-              <i class="fas fa-envelope text-pink-600 text-lg mt-1"></i>
-              <div>
-                <h3 class="font-semibold">Email</h3>
-                <p><a href="mailto:gokulrajgrkr@gmail.com" class="text-pink-600">gokulrajgrkr@gmail.com</a></p>
-                <p class="text-sm text-gray-600">Response within 24 hours</p>
-              </div>
+          </div>
+          <div class="flex items-start space-x-3">
+            <i class="fas fa-envelope text-[var(--primary)] text-lg mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Email</h3>
+              <p><a href="mailto:gokulrajgrkr@gmail.com" class="text-[var(--primary)]">gokulrajgrkr@gmail.com</a></p>
+              <p class="text-sm text-gray-600">Response within 24 hours</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </section>
 
-  <!-- <button id="darkModeBtn" class="fixed bottom-6 right-6 bg-gray-800 text-white p-3  rounded-full shadow-lg hover:bg-gray-700 transition z-50">
-    <i class="fas fa-moon"></i>
-  </button> -->
+  </div>
+</section>
 
-      <!-- WhatsApp Button -->
-    <a href="https://wa.me/971503123570" target="_blank" id="whatsappBtn" class="fixed bottom-20 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-opacity z-50">
-      <i class="fab fa-whatsapp text-xl"></i>
-    </a>
-  
-  <!-- Go to Top Button -->
-  <button id="goTopBtn" class="fixed bottom-36 right-7 bg-[var(--primary-dark)] text-[var(--secondary-light)] p-3 rounded-full shadow-lg transition-opacity opacity-0 pointer-events-none z-50">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/971503123570" target="_blank" id="whatsappBtn" class="fixed bottom-20 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 z-50">
+  <i class="fab fa-whatsapp text-xl"></i>
+</a>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-12">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-      <div>
-        <a href="index.html" class="text-2xl font-bold text-pink-600">
-            <img src="Documents/LogoIcon.png" alt="Apteiv Logo" class="h-12 object-contain">
-          </a>
-        <p class="mt-4 text-sm">Professional website development and maintenance services to help your business thrive online.</p>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-3">Services</h3>
-        <ul class="space-y-2">
-          <li><a href="services.html#development" class="hover:gradient-text">Website Development</a></li>
-          <li><a href="services.html#maintenance" class="hover:gradient-text">Monthly Maintenance</a></li>
-          <li><a href="services.html#seo" class="hover:gradient-text">SEO Services</a></li>
-          <li><a href="services.html#hosting" class="hover:gradient-text">Hosting Solutions</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-3">Contact Us</h3>
-        <p><i class="fas fa-phone mr-2"></i> +971 503123570</p>
-        <p><i class="fas fa-envelope mr-2"></i> gokulrajgrkr@gmail.com</p>
-      </div>
+<!-- Go to Top Button -->
+<button id="goTopBtn" class="fixed bottom-36 right-7 bg-[var(--primary-dark)] text-[var(--secondary-light)] p-3 rounded-full shadow-lg opacity-0 pointer-events-none z-50">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-12 fade-in">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    <div>
+      <img src="Documents/LogoIcon.png" alt="Apteiv Logo" class="h-12 object-contain">
+      <p class="mt-4 text-sm">Professional website development and maintenance services to help your business thrive online.</p>
     </div>
-    <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between px-6">
-      <p class="text-sm">&copy; 2023 WebCraft Pro. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:gradient-text"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="hover:gradient-text"><i class="fab fa-instagram"></i></a>
-      </div>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 gradient-text">Services</h3>
+      <ul class="space-y-2">
+        <li><a href="services.html#development" class="hover:gradient-text">Website Development</a></li>
+        <li><a href="services.html#maintenance" class="hover:gradient-text">Monthly Maintenance</a></li>
+        <li><a href="services.html#seo" class="hover:gradient-text">SEO Services</a></li>
+        <li><a href="services.html#hosting" class="hover:gradient-text">Hosting Solutions</a></li>
+      </ul>
     </div>
-  </footer>
+    <div>
+      <h3 class="text-xl font-semibold mb-4 gradient-text">Contact Us</h3>
+      <p><i class="fas fa-phone mr-2"></i> +971 503123570</p>
+      <p><i class="fas fa-envelope mr-2"></i> gokulrajgrkr@gmail.com</p>
+    </div>
+  </div>
+  <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between px-6">
+    <p class="text-sm">&copy; 2025 Apteiv. All rights reserved.</p>
+    <div class="flex space-x-4 mt-4 md:mt-0">
+      <a href="#" class="hover:gradient-text"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:gradient-text"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
-<!-- Toggle Script -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const bars = menuBtn.querySelectorAll('span');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-
-    // Animate Hamburger to X
-    bars[0].classList.toggle('rotate-45 translate-y-2');
-    bars[1].classList.toggle('opacity-0');
-    bars[2].classList.toggle('-rotate-45 -translate-y-2');
-  });
-</script>
