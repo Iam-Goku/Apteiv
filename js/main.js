@@ -1,52 +1,64 @@
 // DOM Ready Function
 document.addEventListener('DOMContentLoaded', function() {
 
-  // Mobile Menu Toggle (Header Hamburger)
-  const menuBtn = document.getElementById('menu-btn');
-  const navLinks = document.getElementById('nav-links');
-  const bars = menuBtn.querySelectorAll('span');
+  // ===============================
+  // Mobile Menu Toggle (Modern & Safe)
+  // ===============================
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-  menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('hidden');
-
-    // Animate hamburger into X
-    bars[0].classList.toggle('rotate-45');
-    bars[0].classList.toggle('translate-y-2');
-    bars[1].classList.toggle('opacity-0');
-    bars[2].classList.toggle('-rotate-45');
-    bars[2].classList.toggle('-translate-y-2');
-  });
-
-  // Smooth Scrolling for Anchor Links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: 'smooth'
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            mobileMenu.classList.toggle('hidden');
         });
+    } else {
+        console.error("Could not find menu button or mobile menu elements.");
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu after clicking a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    menuBtn.classList.remove('open');
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+    });
+    
+  // ===============================
+  // Go to Top button functionality
+  // ===============================
+  const goTopBtn = document.getElementById('goTopBtn');
+  if(goTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        goTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        goTopBtn.classList.add('opacity-100');
+      } else {
+        goTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        goTopBtn.classList.remove('opacity-100');
       }
     });
-  });
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
-  // Go to Top button functionality
-  const goTopBtn = document.getElementById('goTopBtn');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      goTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-      goTopBtn.classList.add('opacity-100');
-    } else {
-      goTopBtn.classList.add('opacity-0', 'pointer-events-none');
-      goTopBtn.classList.remove('opacity-100');
-    }
-  });
-  goTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
+  // ===============================
   // Contact Form Handler
+  // ===============================
   class ContactForm {
     constructor() {
       this.form = document.getElementById('contact-form');
@@ -91,7 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   new ContactForm();
 
+  // ===============================
   // Portfolio Filter
+  // ===============================
   class PortfolioFilter {
     constructor() {
       this.container = document.querySelector('.portfolio-grid');
@@ -125,7 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   new PortfolioFilter();
 
+  // ===============================
   // Package Toggle (Monthly/Annually)
+  // ===============================
   class PackageToggle {
     constructor() {
       this.toggle = document.getElementById('package-toggle');
@@ -145,7 +161,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   new PackageToggle();
 
+  // ===============================
   // Pricing Tabs
+  // ===============================
   const tabButtons = document.querySelectorAll('.pricing-tabs .tab-button');
   const tabContents = document.querySelectorAll('.pricing-section .tab-content');
   function switchTab(tabId) {
@@ -160,7 +178,9 @@ document.addEventListener('DOMContentLoaded', function() {
   tabButtons.forEach(btn => btn.addEventListener('click', () => switchTab(btn.dataset.tab)));
   if (tabButtons.length) switchTab(tabButtons[0].dataset.tab);
 
+  // ===============================
   // Lottie Animations
+  // ===============================
   const lottieAnimations = [
     { id: 'lottie-price', path: 'images/anime-price.json' },
     { id: 'lottie-services', path: 'images/anime-service.json' },
@@ -173,7 +193,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (container) lottie.loadAnimation({ container, renderer: 'svg', loop: true, autoplay: true, path: a.path });
   });
 
+  // ===============================
   // Animate On Scroll
+  // ===============================
   const animateOnScroll = () => {
     document.querySelectorAll('.animate, .animate-me').forEach(el => {
       const pos = el.getBoundingClientRect().top;
@@ -183,7 +205,9 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', animateOnScroll);
   animateOnScroll();
 
+  // ===============================
   // Intersection Observer for Lazy Loading
+  // ===============================
   const lazyImages = document.querySelectorAll('img.lazy');
   const lazyObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -197,23 +221,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   lazyImages.forEach(img => lazyObserver.observe(img));
 
+  // ===============================
   // Dark Mode Toggle
+  // ===============================
   const darkModeBtn = document.getElementById("darkModeBtn");
   const body = document.body;
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("dark-mode");
-    darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-  } else darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
-  darkModeBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    if (body.classList.contains("dark-mode")) {
-      localStorage.setItem("theme", "dark");
+  if (darkModeBtn) {
+    if (savedTheme === "dark") {
+      body.classList.add("dark-mode");
       darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-      localStorage.setItem("theme", "light");
-      darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-  });
+    } else darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+
+    darkModeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        localStorage.setItem("theme", "light");
+        darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    });
+  }
 
 });

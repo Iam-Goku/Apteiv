@@ -21,10 +21,10 @@
       <img src="Documents/Logo.png" alt="Apteiv Logo" class="h-20 object-contain">
     </a>
     <div id="nav-links" class="hidden md:flex flex-row space-x-8">
-      <a href="index.html" class="gradient-text font-bold text-lg md:text-xl">Home</a>
-      <a href="services.html" class="gradient-text text-lg md:text-xl">Services</a>
-      <a href="pricing.html" class="gradient-text text-lg md:text-xl">Pricing</a>
-      <a href="contact.html" class="gradient-text text-lg md:text-xl">Contact Us</a>
+      <a href="index.html" class="gradient-text font-bold text-lg md:text-xl transition transform hover:scale-105">Home</a>
+      <a href="services.html" class="gradient-text text-lg md:text-xl transition transform hover:scale-105">Services</a>
+      <a href="pricing.html" class="gradient-text text-lg md:text-xl transition transform hover:scale-105">Pricing</a>
+      <a href="contact.html" class="gradient-text text-lg md:text-xl transition transform hover:scale-105">Contact Us</a>
     </div>
     <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-6 focus:outline-none">
       <span class="block h-0.5 w-full bg-gray-600 transform transition duration-300 origin-top-left"></span>
@@ -34,11 +34,47 @@
   </div>
   <div id="mobile-menu" class="md:hidden hidden bg-white px-6 pb-4 space-y-4 shadow-lg">
     <a href="index.html" class="block gradient-text font-semibold">Home</a>
-    <a href="services.html" class="block gradient-text">Services</a>
+    <a href="services.html" class="block gradient-text font-semibold">Services</a>
     <a href="pricing.html" class="block gradient-text">Pricing</a>
     <a href="contact.html" class="block gradient-text">Contact Us</a>
   </div>
 </nav>
+
+<!-- Toggle Script -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuPanel = mobileMenu.querySelector('div');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('opacity-100');
+
+    if (isOpen) {
+      mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+      mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      menuPanel.classList.remove('translate-x-0');
+      menuPanel.classList.add('translate-x-full');
+    } else {
+      mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+      mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+      menuPanel.classList.remove('translate-x-full');
+      menuPanel.classList.add('translate-x-0');
+    }
+  });
+</script>
+
+
+
+
+<!-- Mobile Menu (moved outside nav) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-6 transform scale-95 opacity-0 pointer-events-none transition-all duration-500 z-50">
+  <a href="index.html" class="nav-link block font-bold text-2xl">Home</a>
+  <a href="services.html" class="nav-link block text-2xl">Services</a>
+  <a href="pricing.html" class="nav-link block text-2xl">Pricing</a>
+  <a href="contact.html" class="nav-link block text-2xl">Contact Us</a>
+</div>
+
+
 
 <!-- Hero Section -->
 <section class="hero h-screen flex items-center justify-center text-center text-white bg-gradient-to-r from-pink-500 to-purple-600">
