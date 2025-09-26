@@ -63,6 +63,17 @@ body.dark-mode select {
   transition: all var(--transition);
 }
 
+.footer-cta {
+  background: linear-gradient(135deg, #36324d, #492935, #5b2b4a);
+  color: #fff;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.footer-hero{
+  margin-bottom: -45px;
+}
+
 /* ===== Buttons ===== */
 .btn-gradient {
   background: linear-gradient(90deg, #755fe4, #c8b3ff, #d1b3f9);
@@ -114,15 +125,17 @@ body.dark-mode select {
 }
 
 /* ===== Hero Section ===== */
+
 .hero {
+  margin-top: -45px;
   position: relative;
-  background: url('Documents/hero-bg.jpg') center/cover no-repeat;
+  /* background: url('Documents/hero-bg.jpg') center/cover no-repeat; */
 }
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(20,20,40,0.8));
+  /* background: linear-gradient(rgba(0,0,0,0.5), rgba(20,20,40,0.8)); */
   z-index: 0;
 }
 .hero > div {
@@ -196,48 +209,80 @@ ul.list-inside { padding-left: 1rem; }
   .grid { grid-template-columns: 1fr !important; }
 }
 
-/* ===== Navbar Link Styles ===== */
+/* ===== Futuristic Navbar ===== */
 nav {
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.95);
-  transition: all 0.4s ease;
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgba(200, 200, 255, 0.2);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, #36324d, #6b3a4e, #5b2b4a);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
 }
+
+/* Glow effect on scroll */
 nav.sticky {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  /* background: linear-gradient(135deg, #7b68ee, #d02090, #ff85d4); */
+  box-shadow: 0 12px 30px rgba(199, 21, 133, 0.4);
 }
+
+/* ===== Navbar Links ===== */
 nav a {
   position: relative;
   font-weight: 600;
-  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.2rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
   transition: all 0.3s ease;
 }
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
-  transition: width 0.3s ease;
-}
-nav a:hover::after { width: 100%; }
-nav a:hover { transform: scale(1.05); }
 
-/* Hamburger lines */
+/* Hover & Active 3D effect */
+nav a:hover,
+nav a.active {
+  transform: scale(1.07) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25),
+              inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Mobile Menu ===== */
+#mobile-menu {
+  background: linear-gradient(135deg, #36324d, #6b3a4e, #5b2b4a);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#mobile-menu a {
+  display: block;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu a:hover,
+#mobile-menu a.active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Hamburger Button ===== */
 #menu-btn span {
   display: block;
   height: 3px;
   width: 100%;
   border-radius: 2px;
-  background: linear-gradient(90deg, #b3b7ff, #c8b3ff, #dfb3e7);
+  background: #fff;
   transition: all 0.4s ease;
 }
+
 
 /* Open state */
 #menu-btn.open .top-line {
