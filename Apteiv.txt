@@ -15,6 +15,10 @@ for crawling
 https://search.google.com/test/rich-results/result?id=UxBm39Rz6Jya8YrU9mXDUQ
 
 
+Rive(can create interactieve animations for free)
+https://editor.rive.app/home
+
+
 #ff4cb7 for the pink
 #3cf0ad for the green 
 #7cb3e5 for the blue 
